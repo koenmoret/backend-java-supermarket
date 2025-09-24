@@ -25,6 +25,8 @@ public class Customer<Supermarket> {
             superMarket.buyFruit(amount);
         } else if (product.equals("toilet paper")) {
             superMarket.buyToiletPaper(amount);
+        }else {
+            IO.println("Artikel " + product + " hebben wij niet.");
         }
     }
 

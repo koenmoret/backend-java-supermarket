@@ -6,10 +6,29 @@ public class SuperMarket {
     Product cheese;
 
     public SuperMarket(Product bread, Product fruit, Product cheese, Product toiletPaper) {
-        this.bread = bread;
-        this.fruit = fruit;
-        this.toiletPaper = toiletPaper;
-        this.cheese = cheese;
+
+        Product fake = new Product("fake",0,0);
+
+        if(bread == null){
+           this.bread = fake;
+        }else {
+            this.bread = bread;
+        }
+        if(fruit == null){
+            this.fruit = fake;
+        }else {
+            this.fruit = fruit;
+        }
+        if(toiletPaper == null){
+            this.toiletPaper = fake;
+        }else {
+            this.toiletPaper = toiletPaper;
+        }
+        if(cheese == null){
+            this.cheese = fake;
+        }else {
+            this.cheese = cheese;
+        }
     }
 
     public void buyBread(int amount){
