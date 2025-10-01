@@ -15,17 +15,27 @@ public class Customer<Supermarket> {
         return name;
     }
 
-    public void buyItem(String product, int amount){
+    public SuperMarket getSuperMarkt() {
+        return superMarket;
+    }
 
-        if(product.equals("bread")){
-            superMarket.buyBread(amount);
-        } else if(product.equals("cheese")){
-            superMarket.buyCheese(amount);
-        } else if(product.equals("fruit")){
-            superMarket.buyFruit(amount);
-        } else if (product.equals("toilet paper")) {
-            superMarket.buyToiletPaper(amount);
+    public void buyItem(String productName, int amount){
+
+        for(Product product : superMarket.productList){
+            if(product.getName().equalsIgnoreCase(productName)){
+                superMarket.buyItem(product, amount);
+                return;
+            }
         }
+//        if(product.equals("bread")){
+//            superMarket.buyBread(amount);
+//        } else if(product.equals("cheese")){
+//            superMarket.buyCheese(amount);
+//        } else if(product.equals("fruit")){
+//            superMarket.buyFruit(amount);
+//        } else if (product.equals("toilet paper")) {
+//            superMarket.buyToiletPaper(amount);
+//        }
     }
 
 

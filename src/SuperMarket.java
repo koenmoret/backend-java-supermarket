@@ -1,32 +1,38 @@
+import java.util.ArrayList;
+
 public class SuperMarket {
 
-    Product bread;
-    Product fruit;
-    Product toiletPaper;
-    Product cheese;
+    private String name;
+    ArrayList<Product> productList;
 
-    public SuperMarket(Product bread, Product fruit, Product cheese, Product toiletPaper) {
-        this.bread = bread;
-        this.fruit = fruit;
-        this.toiletPaper = toiletPaper;
-        this.cheese = cheese;
+    public SuperMarket(String name, ArrayList<Product> productList) {
+        this.name = name;
+        this.productList = productList;
     }
 
-    public void buyBread(int amount){
-        buyItem(this.bread, amount);
+    public String getName(){
+        return name;
     }
 
-    public void buyFruit(int amount){
-        buyItem(this.fruit, amount);
+    public ArrayList<Product> getProductList(){
+        return productList;
     }
 
-    public void buyToiletPaper(int amount){
-        buyItem(this.toiletPaper, amount);
-    }
-
-    public void buyCheese(int amount){
-        buyItem(this.cheese, amount);
-    }
+//    public void buyBread(int amount){
+//        buyItem(this.bread, amount);
+//    }
+//
+//    public void buyFruit(int amount){
+//        buyItem(this.fruit, amount);
+//    }
+//
+//    public void buyToiletPaper(int amount){
+//        buyItem(this.toiletPaper, amount);
+//    }
+//
+//    public void buyCheese(int amount){
+//        buyItem(this.cheese, amount);
+//    }
 
     public void buyItem(Product product, int amount){
         if(product.getAmount() >= amount){
