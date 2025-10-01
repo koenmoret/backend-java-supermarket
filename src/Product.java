@@ -21,4 +21,3 @@ public class Product {
         return amount;
     }
 }
-
